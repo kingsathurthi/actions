@@ -26,20 +26,20 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-    - name: test
-      run: grep -i "ubuntu" neofetch.txt
     - name: download artifact
       uses: actions/download-artifact@v4
       with:
-        name: neofetch-artifact
+          name: neofetch-artifact
+    - name: test
+      run: grep -i "ubuntu" neofetch.txt
 
   deploy:
     runs-on: ubuntu-latest
     needs: test
     steps:
-    - name: cat deploy
-      run: cat neofetch.txt
     - name: download artifact
       uses: actions/download-artifact@v4
       with:
-        name: neofetch-artifact
+          name: neofetch-artifact
+    - name: cat deploy
+      run: cat neofetch.txt
