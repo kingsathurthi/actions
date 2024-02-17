@@ -11,9 +11,9 @@ jobs:
       uses: actions/checkout@v4 
     - name: list file
       run: |
-       ls 
+       ls -ltra
        cat README.md
-       apt-install neofetch -y
+       apt-get install neofetch -y
        neofetch > neofetch.txt
     - name: upload artifact
       uses: actions/upload-artifact@v4
