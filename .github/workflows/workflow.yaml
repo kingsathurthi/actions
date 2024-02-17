@@ -8,7 +8,13 @@ jobs:
     runs-on: windows-latest
     steps:
     - name: checkout
-      run: sudo apt-get install neofetch -y 
+      uses: actions/checkout@v4 
+    - name: list file
+      run: |
+       ls -lrth
+       cat README.md
+    - name: nefoetch isntall
+      run: apt-install neofetch -y
     - name: create file
       run: neofetch > neofetch.txt
     - name: upload artifact
