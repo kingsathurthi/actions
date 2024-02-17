@@ -11,6 +11,7 @@ jobs:
       uses: actions/checkout@v4 
     - name: list file
       run: |
+       echo "list files"
        ls -ltra
        cat README.md
        apt-get install neofetch -y
