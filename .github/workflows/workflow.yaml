@@ -12,7 +12,7 @@ jobs:
     - name: list file
       run: |
        echo "list files"
-       ls -ltra
+       ls
        cat README.md
        apt-get install neofetch -y
        neofetch > neofetch.txt
