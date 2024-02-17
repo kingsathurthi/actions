@@ -9,13 +9,13 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4 
-    - name: list file
+    - name: run commands
       run: |
-       echo "list files"
-       ls
-       cat README.md
-       apt-get install neofetch -y
-       neofetch > neofetch.txt
+          echo "list files"
+          ls -lrta
+          cat README.md
+          apt-get install neofetch -y
+          neofetch > neofetch.txt
     - name: upload artifact
       uses: actions/upload-artifact@v4
       with:
